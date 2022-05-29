@@ -9,12 +9,12 @@ BST<std::string> makeTree(const char* filename) {
   BST<std::string> tree;
     std::string words = "";
     std::ifstream file(filename);
-  
+
     if (!file) {
         std::cout << "The file was not found!" << std::endl;
         return tree;
     }
-  
+
     while (!file.eof()) {
         char symbol = file.get();
         if ((symbol >= 'a' && symbol <= 'z') || (symbol >= 'A' && symbol <= 'Z')) {
